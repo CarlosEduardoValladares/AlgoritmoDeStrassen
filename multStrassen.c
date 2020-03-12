@@ -4,6 +4,25 @@
 #include <string.h>
 #include <math.h>
 
+void printMatrix(int size, int*matrix){
+
+  for(int i = 0; i < size; i++){
+    for(int j = 0; j < size; j++){
+      printf("%d ", *((matrix+i*size)+j));
+    }
+    printf("\n");
+  }
+
+}
+
+int *multStrassen(int size, int *matrix){
+
+  
+
+  return matrix;
+
+}
+
 int main(int argc, char* argv[]){
 
     int input;
@@ -45,6 +64,19 @@ int main(int argc, char* argv[]){
     }
 
     int matriz[size][size];
+
+    for(int i = 0; i < size; i++){
+      for(int j = 0; j < size; j++){
+        if(j < input && i < input){
+          matriz[i][j] = 1;
+        } else {
+          matriz[i][j] = 0;
+
+        }
+      }
+    }
+
+    printMatrix(size, (int *)matriz);
 
     return 0;
 }
